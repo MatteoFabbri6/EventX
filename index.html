@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IESE Ticket Exchange</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>IESE Ticket Exchange</h1>
+    <section id="post-ticket">
+        <h2>Post a Ticket for Sale</h2>
+        <form id="ticketForm">
+            <input type="text" id="eventName" placeholder="Event Name" required>
+            <input type="date" id="date" required>
+            <input type="text" id="location" placeholder="Location" required>
+            <input type="number" id="askPrice" placeholder="Asking Price" required>
+            <button type="submit">Post Ticket</button>
+        </form>
+    </section>
+
+    <section id="listings">
+        <h2>Ticket Listings</h2>
+        <ul id="ticketsList"></ul>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
