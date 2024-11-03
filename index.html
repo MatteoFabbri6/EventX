@@ -6,9 +6,13 @@
     <title>IESE Ticket Exchange</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
 </head>
 <body>
     <h1>IESE Ticket Exchange</h1>
+    
     <section id="post-ticket">
         <h2>Post a Ticket for Sale</h2>
         <form id="ticketForm">
@@ -20,9 +24,24 @@
         </form>
     </section>
 
-    <section id="listings">
-        <h2>Ticket Listings</h2>
-        <ul id="ticketsList"></ul>
+    <section id="post-bid">
+        <h2>Request a Ticket</h2>
+        <form id="bidForm">
+            <input type="text" id="bidEventName" placeholder="Event Name" required>
+            <input type="number" id="bidPrice" placeholder="Bid Price" required>
+            <button type="submit">Post Request</button>
+        </form>
+    </section>
+
+    <section id="search">
+        <h2>Search Tickets</h2>
+        <input type="text" id="searchBar" placeholder="Search events...">
+        <ul id="searchResults"></ul>
+    </section>
+
+    <section id="notifications">
+        <h2>Notifications</h2>
+        <div id="notificationList"></div>
     </section>
 
     <script src="app.js"></script>
